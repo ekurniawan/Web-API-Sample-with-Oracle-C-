@@ -18,5 +18,13 @@ namespace BL
                 return pegawaiDal.GetAllPegawai();
             }
         }
+
+        public IEnumerable<Pegawai> GetPegawaiByNamaAndDivisi(int divisiID, string namaPegawai)
+        {
+            using (PegawaiDAL pegawaiDal = new PegawaiDAL())
+            {
+                return pegawaiDal.GetPegawaiByNamaAndDivisi(divisiID, namaPegawai);
+            }
+        }
     }
 }

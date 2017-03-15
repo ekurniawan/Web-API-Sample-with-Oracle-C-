@@ -19,6 +19,12 @@ namespace SampleAPI.Controllers
             return pegawaiBL.GetAllPegawai();
         }
 
+        public IEnumerable<Pegawai> Get(int divisiID, string namaPegawai)
+        {
+            PegawaiBL pegawaiBL = new PegawaiBL();
+            return pegawaiBL.GetPegawaiByNamaAndDivisi(divisiID, namaPegawai);
+        }
+
         // GET: api/Pegawai/5
         public string Get(int id)
         {

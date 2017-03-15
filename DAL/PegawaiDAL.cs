@@ -37,6 +37,20 @@ namespace DAL
             }
         }
 
+        public IEnumerable<Pegawai> GetPegawaiByNamaAndDivisi(int divisiID,string namaPegawai)
+        {
+            using (OracleConnection conn = new OracleConnection(GetConnectionString()))
+            {
+                string strSql = @"select * from Erick.Pegawai 
+                                where DivisiID=:DivisiID and Nama like '%' || :Nama || '%'";
+                var param = new { DivisiID = divisiID, Nama = namaPegawai };
+                var results = conn.Query<Pegawai>(strSql, param);
+                return results;
+            }
+        }
+
+
+
         public void Dispose()
         {
             GC.SuppressFinalize(this);
