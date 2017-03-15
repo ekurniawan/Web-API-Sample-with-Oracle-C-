@@ -38,8 +38,6 @@ namespace DAL
             }
         }
 
-        
-
         public Divisi GetByID(int divisiID)
         {
             using (OracleConnection conn = new OracleConnection(GetConnectionString()))
