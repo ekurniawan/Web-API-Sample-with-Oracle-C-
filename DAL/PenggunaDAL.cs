@@ -18,7 +18,7 @@ namespace DAL
             using (OracleConnection conn = new OracleConnection(GetConnectionString()))
             {
                 string strSql = @"insert into Pengguna(NamaPengguna,SandiPengguna,Aturan) 
-                                  values(:NamePengguna,:SandiPengguna,:Aturan)";
+                                  values(:NamaPengguna,:SandiPengguna,:Aturan)";
                 var param = new
                 {
                     NamaPengguna = pengguna.NamaPengguna,
