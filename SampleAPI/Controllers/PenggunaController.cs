@@ -19,7 +19,26 @@ namespace SampleAPI.Controllers
         }
 
         // GET: api/Pengguna/5
-        public Pengguna Get(Pengguna pengguna)
+        /*public Pengguna Get(Pengguna pengguna)
+        {
+            PenggunaBL penggunaBL = new PenggunaBL();
+            try
+            {
+                var result = penggunaBL.LoginPengguna(pengguna);
+                if (result != null)
+                    return result;
+                else
+                    return new Pengguna();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }*/
+
+        [Route("api/Pengguna/LoginPengguna")]
+        [HttpPost]
+        public Pengguna LoginPengguna(Pengguna pengguna)
         {
             PenggunaBL penggunaBL = new PenggunaBL();
             try
