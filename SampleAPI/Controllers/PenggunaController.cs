@@ -25,7 +25,10 @@ namespace SampleAPI.Controllers
             try
             {
                 var result = penggunaBL.LoginPengguna(pengguna);
-                return result;
+                if (result != null)
+                    return result;
+                else
+                    return new Pengguna();
             }
             catch (Exception ex)
             {
