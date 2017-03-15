@@ -26,5 +26,7 @@ namespace BL
                 return pegawaiDal.GetPegawaiByNamaAndDivisi(divisiID, namaPegawai);
             }
         }
+
+       
     }
 }

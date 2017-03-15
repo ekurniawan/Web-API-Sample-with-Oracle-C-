@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="DivisiDAL.cs" />
     <Compile Include="PegawaiDAL.cs" />
+    <Compile Include="PenggunaDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewPegawaiWithDivisiDAL.cs" />
   </ItemGroup>

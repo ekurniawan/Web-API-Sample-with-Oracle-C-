@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Divisi.cs" />
     <Compile Include="Pegawai.cs" />
+    <Compile Include="Pengguna.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewPegawaiWithDivisi.cs" />
   </ItemGroup>
