@@ -28,7 +28,7 @@ namespace DAL
 
                 try
                 {
-                    conn.Execute(strSql,param);
+                    conn.Execute(strSql, param);
                 }
                 catch (OracleException oraEx)
                 {
@@ -43,8 +43,11 @@ namespace DAL
             {
                 string strSql = @"select * from Pengguna where NamaPengguna=:NamaPengguna 
                                   and SandiPengguna=:SandiPengguna";
-                var param = new { NamaPengguna = pengguna.NamaPengguna,
-                    SandiPengguna = pengguna.SandiPengguna };
+                var param = new
+                {
+                    NamaPengguna = pengguna.NamaPengguna,
+                    SandiPengguna = pengguna.SandiPengguna
+                };
                 var result = conn.Query<Pengguna>(strSql, param).SingleOrDefault();
                 if (result != null)
                     return result;

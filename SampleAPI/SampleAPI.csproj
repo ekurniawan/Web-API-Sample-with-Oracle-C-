@@ -160,6 +160,7 @@
     <Compile Include="Controllers\DivisiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PegawaiController.cs" />
+    <Compile Include="Controllers\PenggunaController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\ViewPegawaiWithDivisiController.cs" />
     <Compile Include="Global.asax.cs">
